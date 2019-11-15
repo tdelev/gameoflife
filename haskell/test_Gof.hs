@@ -15,7 +15,7 @@ test_are_neighbors6 = TestCase (assertEqual "should be neighbors 1,1 and 2,2" (T
 test_are_neighbors7 = TestCase (assertEqual "should be neighbors 1,1 and 0,2" (True) (areNeighbors (1, 1) (0, 2)))
 test_are_neighbors8 = TestCase (assertEqual "should be neighbors 1,1 and 2,0" (True) (areNeighbors (1, 1) (2, 0)))
 
-test_print = TestCase (assertEqual "should print game" ("Generation: 1") (print_game (Set.fromList [], 1)))
+test_print = TestCase (assertEqual "should print game" ("Generation: 1\n**\n *\n") (print_game (Set.fromList [(0,0), (0,1), (1, 1)], 1)))
 test_init = TestCase (assertEqual "should init game" (Set.fromList [(1, 1)], 1) (init_game [(1, 1)]))
 
 test_count_n = TestCase (assertEqual "should have 2 neighbors" (2) (countN (Set.fromList [(1, 1), (2, 2), (3, 3)]) (1, 2)))
